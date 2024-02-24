@@ -3,7 +3,10 @@
     "builds": [
       {
         "src": "main.py",
-        "use": "@vercel/python@latest"
+        "use": "@vercel/python@latest",
+        "build": {
+            "command": "bash vercel-build.sh"
+          }
       }
     ],
     "routes": [
