@@ -1,19 +1,19 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "custom_script.sh",
-      "use": "@now/execute"
-    },
-    {
-      "src": "main.py",
-      "use": "@vercel/python@latest"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "main.app"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "Dockerfile",
+        "use": "@vercel/build@latest",
+        "config": {
+          "image": "my-fastapi-app"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "main.app"
+      }
+    ]
+  }
+  

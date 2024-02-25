@@ -6,14 +6,14 @@ import json
 import os
 import openai
 from dotenv import load_dotenv
-from llama_index.core import Document
+# from llama_index.core import Document
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
-from pinecone import Pinecone, ServerlessSpec
+from pinecone import Pinecone
 from llama_index.vector_stores.pinecone import PineconeVectorStore
 from llama_index.core import StorageContext
 from llama_index.llms.openai import OpenAI
-from langchain.prompts import HumanMessagePromptTemplate
-from langchain_core.messages import SystemMessage
+# from langchain.prompts import HumanMessagePromptTemplate
+# from langchain_core.messages import SystemMessage
 from langchain_core.prompts import ChatPromptTemplate
 from llama_index.core.output_parsers import LangchainOutputParser
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
